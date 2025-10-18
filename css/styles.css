@@ -33,6 +33,7 @@ body {
 }
 
 .modal-content {
+    
     background-color: white;
     padding: 24px 24px;
     border-radius: 4px;
@@ -40,12 +41,26 @@ body {
     height: 584px;
 }
 
-.modal_close_button {
+.form-closing {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(231, 233, 252, 1);
 
-    margin-left: 336px;
-    margin-bottom: 24px;
-    
+    margin: 24px 24px 24px 336px;
+
 }
+
+
+.form-close-icon {
+
+    width: 8px;
+    height: 8px;
+
+
+  }
 
 .baslik-modal{
     font-weight: 500;
@@ -53,7 +68,7 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
-    color: rgb(46, 66, 48);
+    color: rgba(46, 47, 66, 1);
     margin-bottom: 16px;
 }
 
