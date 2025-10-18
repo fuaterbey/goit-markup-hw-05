@@ -30,41 +30,51 @@
   <body>
     <div class="modal is-open">
       <div class="modal-content">
+        <img
+          class="modal_close_button"
+          src="./images/modal_close_button.jpg"
+          width="24"
+          height="24"
+          alt="Close Button"
+        />
+
         <h2 class="baslik-modal">
           Leave your contacts and we will call you back
         </h2>
 
-        <fieldset>
-          <label class="form-label" name="your_name">
+        <form class="form" name="contact_form" autocomplete="off">
+          <label class="form-label" name="user-name">
             <span class="label-text">Name</span>
+
             <input
               class="form-input"
               type="text"
-              name="your_name"
+              name="user-name"
               autofocus
             />
           </label>
 
-          <label>
-            Phone
-            <input class="form-input" type="tel" name="phone" />
+          <label class="form-label" name="user-phone">
+            <span class="label-text">Phone</span>
+            <input class="form-input" type="tel" name="user-phone" />
           </label>
 
-          <label>
-            Email
+          <label class="form-label" name="user-email">
+            <span class="label-text">Email</span>
             <input
               class="form-input"
               type="email"
-              name="user_email"
+              name="user-email"
               required
             />
           </label>
 
-          <label class="form-label" name="feedback">
+          <label class="form-label" name="user-feedback">
             <span class="label-text"> Comment </span>
             <textarea
               class="form-input"
-              name="feedback"
+              type="text"
+              name="user-feedback"
               rows="5"
               placeholder="Text input"
             ></textarea>
@@ -79,13 +89,13 @@
               id="policy"
             />
             <label class="term-label" for="policy"
-              >I accept the terms and conditions of the Privacy
-              Policy</label
-            >
+              >I accept the terms and conditions of the
+              <span class="privacy-text">Privacy Policy</span>
+            </label>
           </div>
 
           <button class="form-button" type="submit">Send</button>
-        </fieldset>
+        </form>
       </div>
     </div>
 

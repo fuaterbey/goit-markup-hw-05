@@ -16,14 +16,6 @@ body {
 
 /*Modal kodları buradan itibaren başlar.*/
 
-.baslik-modal{
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    text-align: center;
-}
-
 .modal {
     position: fixed;
     top: 0;
@@ -42,9 +34,39 @@ body {
 
 .modal-content {
     background-color: white;
-    padding: 30px;
-    border-radius: 40px;
-    width: 400px;
+    padding: 24px 24px;
+    border-radius: 4px;
+    width: 408px;
+    height: 584px;
+}
+
+.modal_close_button {
+
+    margin-left: 336px;
+    margin-bottom: 24px;
+    
+}
+
+.baslik-modal{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: rgb(46, 66, 48);
+    margin-bottom: 16px;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+        
+    width: 360px;
+    height: 336px;
+    padding: 0px;
+    
 }
 
 .form-input {
@@ -52,17 +74,23 @@ body {
     flex-direction: column;
     padding: 8px;
     color: #212121;
-    width: 325px;
+    width: 360px;
+    height: 40px;
 
-    border: 1px solid orange;
+    border-color: rgba(77, 90, 229, 1);
     border-radius: 4px;
     font-family: inherit;
     font-size: 16px;
     outline: none;
+
 }
 
 .form-input::placeholder {
     color: #9e9e9e;
+}
+
+.form-input:placeholder-shown {
+    border-color: rgba(46, 47, 66, 0.4);
 }
 
 .form-label {
@@ -74,38 +102,74 @@ body {
     cursor: pointer;
 }
 
+.label-text {
+    margin-bottom: 4px;
+    line-height: 1.166;
+    letter-spacing: 0.04em;
+    color: rgba(142, 143, 153, 1);
+}
+
+.input[type=text] {
+    background-color: white;
+    background-image: url('./images/form-phone-icon.svg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 4px;
+}
+
 
 .term-field {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: 16px;
 }
 
 .term-label {
 
-    cursor: pointer;
+    color: rgba(142, 143, 153, 1);
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.04em;
 }
 
-.label-text {
-    margin-bottom: 8px;
+.privacy-text {
+    color:rgba(77, 90, 229, 1);
+    text-decoration: underline;
 }
+
+
 
 .form-button {
-    align-self: flex-start;
     display: inline-flex;
+    align-self: flex-start;
+    width: 169px;
+    height: 56px;
+    color: rgba(255, 255, 255, 1);
     padding: 12px 32px;
+    
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
+    justify-content: center;
+
     border: none;
     border-radius: 4px;
-    background-color: #2196f3;
-    color: #fff;
-    font-size: inherit;
-    font-weight: bold;
-    cursor: pointer;
+    background-color: rgba(77, 90, 229, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .form-button:hover,
 .form-button:focus {
     background-color: #1976d2;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 /*Modal kodları burada biter.*/
