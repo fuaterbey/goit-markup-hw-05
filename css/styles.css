@@ -26,6 +26,7 @@ body {
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 3;
 }
 
 .is-open {
@@ -43,6 +44,8 @@ body {
 
 .form-closing {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -58,8 +61,7 @@ body {
 
     width: 8px;
     height: 8px;
-
-
+    
   }
 
 .baslik-modal{
@@ -92,7 +94,7 @@ body {
     width: 360px;
     height: 40px;
 
-    border-color: rgba(77, 90, 229, 1);
+    border-color: rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     font-family: inherit;
     font-size: 16px;
@@ -100,31 +102,56 @@ body {
 
 }
 
+.form-input {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    color: #212121;
+    width: 360px;
+    height: 40px;
+
+    border-color: rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.form-input:hover, .form-input:focus {
+    border-color: rgba(77, 90, 229, 1);
+}
+
 .form-input::placeholder {
     color: #9e9e9e;
 }
 
 .form-input:placeholder-shown {
-    border-color: rgba(46, 47, 66, 0.4);
+    border-color: rgba(46, 66, 53, 0.4);
 }
 
 .form-label {
     display: flex;
     flex-direction: column;
     margin-bottom: 8px;
-    transition: color 150ms ease-in-out;
     gap: 4px;
-    cursor: pointer;
+
+    transition: color 150ms ease-in-out;
+
+    position: relative;   /* C11 maddesi için söyledikleriniz doğrultusunda eklendi.*/
 }
 
 .label-text {
     margin-bottom: 4px;
+    font-size: 12px;
     line-height: 1.166;
     letter-spacing: 0.04em;
     color: rgba(142, 143, 153, 1);
 }
 
 .input[type=text] {
+    position: absolute; /* C11 maddesi için söyledikleriniz doğrultusunda eklendi.*/
+
     background-color: white;
     background-image: url('./images/form-phone-icon.svg');
     background-position: 10px 10px;
@@ -180,7 +207,7 @@ body {
 
 .form-button:hover,
 .form-button:focus {
-    background-color: #1976d2;
+    background-color: #404BBF;
 
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -580,6 +607,8 @@ footer {
     background-color: #2E2F42;
     padding: 100px 120px 100px 156px;
     gap: 16px;
+
+    height: 312px;
    }
 
 .webstudio2 {
@@ -614,6 +643,9 @@ footer {
 
 .social {
     margin-left: 120px;
+    margin-right: 80px;
+    width: 208px;
+    height: 80px;
 }
 
 .social-media-text {
@@ -664,3 +696,83 @@ footer {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    width: 453px;
+    height: 80px;
+}
+
+.subscribe-label {
+
+    display: flex;
+    flex-direction: row;
+    margin-right: 24px;
+
+    gap: 4px;
+}
+
+.subscribe-text {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+.email-button-area {
+    display: flex;
+    flex-direction: row;
+}
+
+.form2-input {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: rgba(46, 47, 66, 1);
+    width: 264px;
+    height: 40px;
+
+    border-color: white;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+.form2-input::placeholder {
+    color: rgba(255, 255, 255, 1);
+}
+
+.form2-button {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 24px;
+    background-color: rgba(77, 90, 229, 1);
+    color: rgba(255, 255, 255, 1);
+    width: 165px;
+    height: 40px;
+    gap:16px;
+        
+    border-radius: 4px;
+    
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    outline: none;
+}
+
+.icon-subscribe-button {
+    width: 24px;
+    height: 20px;
+
+}
+
