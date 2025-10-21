@@ -52,8 +52,16 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: rgba(231, 233, 252, 1);
 
-    margin: 24px 24px 24px 336px;
+    margin: 0px 0px 24px 336px;
 
+}
+
+.form-closing:hover {
+
+    background-color: rgba(64, 75, 191, 1);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -62,6 +70,12 @@ body {
     width: 8px;
     height: 8px;
     
+  }
+
+.form-close-icon:hover {
+
+    fill: rgba(255, 255, 255, 1);
+
   }
 
 .baslik-modal{
@@ -73,7 +87,6 @@ body {
     color: rgba(46, 47, 66, 1);
     margin-bottom: 16px;
 }
-
 
 .form {
     display: flex;
@@ -105,7 +118,7 @@ body {
 .form-input {
     display: flex;
     flex-direction: column;
-    padding: 8px;
+    padding: 8px 8px 8px 38px;
     color: #212121;
     width: 360px;
     height: 40px;
@@ -126,39 +139,77 @@ body {
     color: #9e9e9e;
 }
 
-.form-input:placeholder-shown {
-    border-color: rgba(46, 66, 53, 0.4);
-}
 
 .form-label {
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     gap: 4px;
 
     transition: color 150ms ease-in-out;
 
-    position: relative;   /* C11 maddesi için söyledikleriniz doğrultusunda eklendi.*/
+    position: relative; 
 }
 
 .label-text {
-    margin-bottom: 4px;
     font-size: 12px;
     line-height: 1.166;
     letter-spacing: 0.04em;
     color: rgba(142, 143, 153, 1);
 }
 
-.input[type=text] {
-    position: absolute; /* C11 maddesi için söyledikleriniz doğrultusunda eklendi.*/
+.form-email-icon,
+.form-name-icon,
+.form-phone-icon {
 
-    background-color: white;
-    background-image: url('./images/form-phone-icon.svg');
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding-left: 4px;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 32px;
+    left: 19px;
 }
 
+.form-textarea {
+
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    color: #212121;
+    width: 360px;
+     
+    border-color: rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.form-textarea {
+
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    color: #212121;
+    width: 360px;
+
+    border-color: rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.form-textarea:hover,
+.form-textarea:focus {
+    border-color: rgba(77, 90, 229, 1);
+}
+
+.form-textarea::placeholder {
+    color: #9e9e9e;
+}
 
 .term-field {
     display: flex;
@@ -168,20 +219,40 @@ body {
     margin-bottom: 16px;
 }
 
+.term-input {
+    display:none
+}
+
 .term-label {
 
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    align-items: center;
     color: rgba(142, 143, 153, 1);
     font-size: 12px;
     line-height: 1.166;
     letter-spacing: 0.04em;
 }
 
+.box-checkbox {
+
+    box-sizing: content-box;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+}
+
+.thewholequote {
+    display: flex;
+    gap: 4px;
+}
+
 .privacy-text {
     color:rgba(77, 90, 229, 1);
     text-decoration: underline;
+        
 }
-
-
 
 .form-button {
     display: inline-flex;

@@ -52,11 +52,23 @@
               name="user-name"
               autofocus
             />
+
+            <svg class="form-name-icon">
+              <use
+                xlink:href="./images/symbol-defs-form.svg#icon-form-name-icon"
+              ></use>
+            </svg>
           </label>
 
           <label class="form-label" name="user-phone">
             <span class="label-text">Phone</span>
             <input class="form-input" type="tel" name="user-phone" />
+
+            <svg class="form-phone-icon">
+              <use
+                xlink:href="./images/symbol-defs-form.svg#icon-form-phone-icon"
+              ></use>
+            </svg>
           </label>
 
           <label class="form-label" name="user-email">
@@ -67,12 +79,18 @@
               name="user-email"
               required
             />
+
+            <svg class="form-email-icon">
+              <use
+                xlink:href="./images/symbol-defs-form.svg#icon-form-email-icon"
+              ></use>
+            </svg>
           </label>
 
           <label class="form-label" name="user-feedback">
             <span class="label-text"> Comment </span>
             <textarea
-              class="form-input"
+              class="form-textarea"
               type="text"
               name="user-feedback"
               rows="5"
@@ -88,9 +106,14 @@
               value="policy"
               id="policy"
             />
-            <label class="term-label" for="policy"
-              >I accept the terms and conditions of the
-              <span class="privacy-text">Privacy Policy</span>
+            <label class="term-label" for="policy">
+              <div class="box-checkbox"></div>
+              <div class="thewholequote">
+                I accept the terms and conditions of the<span
+                  class="privacy-text"
+                  >Privacy Policy</span
+                >
+              </div>
             </label>
           </div>
 
