@@ -159,8 +159,8 @@ body {
     color: rgba(142, 143, 153, 1);
 }
 
-.form-email-icon,
 .form-name-icon,
+.form-email-icon,
 .form-phone-icon {
 
     position: absolute;
@@ -168,6 +168,12 @@ body {
     height: 12px;
     top: 32px;
     left: 19px;
+}
+
+.form-input:focus + .form-name-icon {
+
+    color: rgba(77, 90, 229, 1);
+
 }
 
 .form-textarea {
@@ -236,17 +242,22 @@ body {
 }
 
 .box-checkbox {
-
+    position: relative;
     box-sizing: content-box;
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
-.thewholequote {
-    display: flex;
-    gap: 4px;
+.form-tick-icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    color: rgba(244, 244, 253, 1);
+    background-color: rgba(64, 75, 191, 1);
+    
 }
+
 
 .privacy-text {
     color:rgba(77, 90, 229, 1);
