@@ -58,12 +58,26 @@ body {
 
 
 
+/*
+--------------------------------------------------------------------------
+SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİYORSAK;
+
 .form-closing:has(.form-close-icon:hover) {
 
     background-color: rgba(64, 75, 191, 1);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+--------------------------------------------------------------------------
+*/
+
+
+.form-closing:hover .form-close-icon {
+    fill: white;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 .form-close-icon {
 
@@ -72,11 +86,7 @@ body {
     
   }
 
-.form-close-icon:hover {
 
-    fill: rgba(255, 255, 255, 1);
-
-  }
 
 .baslik-modal{
     font-weight: 500;
