@@ -56,7 +56,12 @@ body {
 
 }
 
+.form-close-icon {
 
+    width: 8px;
+    height: 8px;
+
+}
 
 /*
 --------------------------------------------------------------------------
@@ -71,22 +76,18 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
 --------------------------------------------------------------------------
 */
 
+.form-closing:hover {
+    background-color: rgba(64, 75, 191, 1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
 
 .form-closing:hover .form-close-icon {
     fill: white;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
-.form-close-icon {
-
-    width: 8px;
-    height: 8px;
-    
-  }
-
-
 
 .baslik-modal{
     font-weight: 500;
@@ -116,21 +117,13 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
     color: #212121;
     width: 360px;
     height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
 
-    border-color: rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     font-family: inherit;
     font-size: 16px;
     outline: none;
 
-}
-
-.form-input:hover, .form-input:focus {
-    border-color: rgba(77, 90, 229, 1);
-}
-
-.form-input::placeholder {
-    color: #9e9e9e;
 }
 
 
@@ -153,9 +146,16 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
     color: rgba(142, 143, 153, 1);
 }
 
-.form-name-icon,
-.form-email-icon,
-.form-phone-icon {
+.form-input:hover,
+.form-input:focus {
+    border-color: rgba(77, 90, 229, 1);
+}
+
+.form-input::placeholder {
+    color: #9e9e9e;
+}
+
+.form-name-icon {
 
     position: absolute;
     width: 12px;
@@ -164,11 +164,33 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
     left: 19px;
 }
 
-.form-input:focus + .form-name-icon {
+.form-phone-icon {
 
-    color: rgba(77, 90, 229, 1);
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        top: 32px;
+        left: 19px;
+    }
+
+.form-email-icon {
+
+        position: absolute;
+        width: 15px;
+        height: 12px;
+        top: 32px;
+        left: 19px;
+    }
+
+.form-input:focus + .form-name-icon,
+.form-input:focus + .form-email-icon,
+.form-input:focus + .form-phone-icon {
+
+    fill: rgba(77, 90, 229, 1);
+    border-color: rgba(77, 90, 229, 1);
 
 }
+
 
 .form-textarea {
 
@@ -177,8 +199,7 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
     padding: 16px;
     color: #212121;
     width: 360px;
-
-    border-color: rgba(46, 47, 66, 0.4);
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     font-family: inherit;
     font-size: 16px;
@@ -212,7 +233,7 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
 
     display: flex;
     flex-direction: row;
-    gap:8px;
+    
     align-items: center;
     color: rgba(142, 143, 153, 1);
     font-size: 12px;
@@ -229,19 +250,39 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
 }
 
 .form-tick-icon {
+
+    opacity: 0;
+
     position: absolute;
     width: 10px;
     height: 8px;
+    top: 4px;
+    left: 3px;
     
     color: rgba(244, 244, 253, 1);
-    background-color: rgba(64, 75, 191, 1);
+    
     
 }
 
+.term-input:checked+.term-label .box-checkbox {
+    
+    background-color: rgba(64, 75, 191, 1);
+
+}
+
+.term-input:checked+.term-label .form-tick-icon {
+
+    opacity: 1;
+}
+
+.term-text {
+    padding-left: 8px;
+}
 
 .privacy-text {
     color:rgba(77, 90, 229, 1);
     text-decoration: underline;
+    padding-left: 4px;
         
 }
 
